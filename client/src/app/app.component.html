@@ -1,0 +1,56 @@
+<app-logo></app-logo>
+<app-button [btnColor]="'primary'" [btnIcon]="'done'" [btnText]="'Primary'"></app-button>
+<app-button [btnColor]="'basic'" [btnText]="'Basic'"></app-button>
+<app-button [btnColor]="'warn'" [btnIcon]="'delete'" [btnText]="'Warn'"></app-button>
+<app-chips [chipsList]="[{text:'Hi',selected:true},{text:'my',selected:false}]"></app-chips>
+<app-input
+  [inputState]="{
+    type: 'search',
+    label: 'Search',
+    state: 'default',
+    rightIcon: 'border_color',
+    leftIcon: 'search',
+    message:{
+      text: 'Message',
+      position: 'left'
+    }
+  }"
+></app-input>
+<app-select [selectState]="{
+  label: 'Select region',
+  state: 'default',
+  multiple: false,
+  rightIcon: 'done',
+  options:[
+    {
+      icon: 'flag',
+      value: 'USA'
+    },
+    {
+      icon: 'flag',
+      value: 'Russia'
+    },
+    {
+      icon: 'flag',
+      value: 'Germany'
+    }
+  ]
+}"></app-select>
+<app-select [selectState]="{
+  label: 'Select region',
+  state: 'default',
+  multiple: true,
+  rightIcon: 'done',
+  options:[
+    {
+      value: 'USA'
+    },
+    {
+      value: 'Russia'
+    },
+    {
+      value: 'Germany'
+    }
+  ]
+}"></app-select>
+<app-tooltip></app-tooltip>

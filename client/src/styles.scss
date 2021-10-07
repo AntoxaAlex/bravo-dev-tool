@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';
+@import "variables";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.tooltip{
+  background-color: $bravo-tooltip-color;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 99% 76%, 98% 77%, 97% 78%, 96% 79%, 95% 80%, 40% 80%, 30% 100%, 30% 80%, 5% 80%, 4% 79%, 3% 78%, 2% 77%, 1% 76%, 0% 75%);
+}

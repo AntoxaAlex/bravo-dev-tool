@@ -1,0 +1,16 @@
+<div class="input-div" [class]="'input-'+selectState.state">
+  <label>{{selectState.label}}</label>
+  <mat-form-field appearance="fill">
+    <mat-select [multiple]="selectState.multiple">
+      <mat-select-trigger *ngIf="selectedOption">
+        <mat-icon *ngIf="selectedOption.icon">{{ selectedOption.icon }}</mat-icon>
+        {{selectState.multiple ? 'items selected' :selectedOption.value }}
+        <mat-icon *ngIf="selectedOption && selectState.rightIcon">{{ selectState.rightIcon }}</mat-icon>
+      </mat-select-trigger>
+      <mat-option *ngFor="let option of selectState.options;index as index" [value]="option.value" (click)="selectOption(index)">
+        <mat-icon *ngIf="option.icon">{{ option.icon }}</mat-icon>
+        {{ option.value }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

@@ -1,0 +1,9 @@
+<button
+  mat-raised-button
+  matTooltip="Info about the action"
+  matTooltipClass="tooltip"
+  [class]="'mat-btn-'+btnColor"
+>
+  <mat-icon *ngIf="btnIcon">{{ btnIcon }}</mat-icon>
+  <span>{{ btnText }}</span>
+</button>

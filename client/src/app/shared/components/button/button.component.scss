@@ -1,0 +1,15 @@
+@import "../../../../variables";
+
+.mat-btn-primary{
+  background-color: $bravo-primary;
+  color: $bravo-basic;
+}
+
+.mat-btn-basic{
+  background-color: $bravo-basic;
+}
+
+.mat-btn-warn{
+  background-color: $bravo-warn;
+  color: $bravo-basic
+}
