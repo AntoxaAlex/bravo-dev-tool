@@ -1,0 +1,36 @@
+@import "../../../../variables";
+
+
+.toaster-icon-div{
+  margin-top: 10px;
+}
+
+.toaster-div{
+  width: 348px;
+  height: 80px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: $bravo-basic;
+  border-radius: 15px;
+}
+
+.toaster-success{
+  background-color: $bravo-success-toaster;
+}
+
+.toaster-accent{
+  background-color: $bravo-accent;
+}
+
+.toaster-error{
+  background-color: $bravo-warn;
+}
+
+.toaster-content p{
+  margin: 0 0 10px 0;
+}
+
+.toaster-content:last-child{
+
+}

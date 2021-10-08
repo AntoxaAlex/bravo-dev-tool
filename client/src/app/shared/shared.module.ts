@@ -18,6 +18,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from "@angular/material/button";
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatNativeDateModule } from "@angular/material/core";
 
 //Components
 import { LogoComponent } from './components/logo/logo.component';
@@ -26,6 +27,12 @@ import { ChipsComponent } from './components/chips/chips.component';
 import { InputComponent } from './components/input/input.component';
 import { SelectComponent } from './components/select/select.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { ToasterComponent } from './components/toaster/toaster.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { TableComponent } from './components/table/table.component';
+import { NavItemComponent } from './components/nav-item/nav-item.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { EmptyStateComponent } from './components/empty-state/empty-state.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +42,12 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
     InputComponent,
     SelectComponent,
     TooltipComponent,
+    ToasterComponent,
+    MenuComponent,
+    TableComponent,
+    NavItemComponent,
+    CalendarComponent,
+    EmptyStateComponent,
   ],
   imports: [
     CommonModule,
@@ -43,6 +56,7 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
     MatSelectModule,
     MatToolbarModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     MatCheckboxModule,
     MatTableModule,
     MatButtonModule,
@@ -60,7 +74,13 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
     ChipsComponent,
     InputComponent,
     SelectComponent,
-    TooltipComponent
+    TooltipComponent,
+    ToasterComponent,
+    MenuComponent,
+    TableComponent,
+    NavItemComponent,
+    CalendarComponent,
+    EmptyStateComponent
   ]
 })
 export class SharedModule { }

@@ -1,7 +1,17 @@
 <app-logo></app-logo>
-<app-button [btnColor]="'primary'" [btnIcon]="'done'" [btnText]="'Primary'"></app-button>
-<app-button [btnColor]="'basic'" [btnText]="'Basic'"></app-button>
-<app-button [btnColor]="'warn'" [btnIcon]="'delete'" [btnText]="'Warn'"></app-button>
+<app-button
+  [btnState]="{
+  type: 'raised',
+  color: 'primary',
+  content: 'Success',
+  icon: 'done'
+}"></app-button>
+<app-button
+  [btnState]="{
+  type: 'icon',
+  color: 'primary',
+  content: 'done'
+}"></app-button>
 <app-chips [chipsList]="[{text:'Hi',selected:true},{text:'my',selected:false}]"></app-chips>
 <app-input
   [inputState]="{
@@ -53,4 +63,74 @@
     }
   ]
 }"></app-select>
-<app-tooltip></app-tooltip>
+
+<app-toaster [toasterState]="{
+  type: 'error',
+  title: 'Creating success',
+  message: 'You successfully created new item',
+  optionContent: 'done'
+}"></app-toaster>
+
+<app-menu [menuState]="{
+ title: 'Menu',
+ icon: 'menu',
+ items:[
+  {
+    text: 'home'
+  },
+  {
+    text: 'dashboard'
+  },
+  {
+    text: 'about'
+  }
+ ]
+}"></app-menu>
+<app-table
+ [tableData]="[
+  {
+    position: 1,
+    name: 'Anton',
+    age: 26,
+    city: 'Odessa'
+  },
+  {
+    position: 2,
+    name: 'Yarik',
+    age: 22,
+    city: 'Donetsk'
+  },
+  {
+    position: 3,
+    name: 'Lesha',
+    age: 31,
+    city: 'Kiev'
+  },
+  {
+    position: 4,
+    name: 'Anna',
+    age: 21,
+    city: 'Lviv'
+  },
+  {
+    position: 5,
+    name: 'Alina',
+    age: 20,
+    city: 'Kharkiv'
+  }
+ ]"
+></app-table>
+<app-nav-item
+  [navItemData]="{
+    text: 'Home',
+    color: 'primary',
+    icon: 'home'
+  }"
+></app-nav-item>
+
+<app-calendar></app-calendar>
+<app-empty-state [emptyState]="{
+  icon: 'airplay',
+  title: 'No data',
+  message: 'Please add some data'
+}"></app-empty-state>
