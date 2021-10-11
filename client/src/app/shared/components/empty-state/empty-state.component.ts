@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EmptyState } from "../../../interfaces/empty-state.interface";
+import { EmptyState } from "../../../core/interfaces/empty-state.interface";
 
 @Component({
   selector: 'app-empty-state',

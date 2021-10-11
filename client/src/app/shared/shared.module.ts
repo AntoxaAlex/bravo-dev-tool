@@ -80,7 +80,9 @@ import { EmptyStateComponent } from './components/empty-state/empty-state.compon
     TableComponent,
     NavItemComponent,
     CalendarComponent,
-    EmptyStateComponent
+    EmptyStateComponent,
+    MatToolbarModule,
+    MatSidenavModule
   ]
 })
 export class SharedModule { }

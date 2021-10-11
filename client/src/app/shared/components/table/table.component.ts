@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TestTableItem } from "../../../interfaces/table-state.interface";
+import { TestTableItem } from "../../../core/interfaces/table-state.interface";
 
 @Component({
   selector: 'app-table',

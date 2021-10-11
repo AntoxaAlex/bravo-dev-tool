@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ButtonState } from "../../../interfaces/button-state.interface";
+import { ButtonState } from "../../../core/interfaces/button-state.interface";
 
 @Component({
   selector: 'app-button',

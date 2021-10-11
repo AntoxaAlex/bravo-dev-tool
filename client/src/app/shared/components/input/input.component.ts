@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ControlValueAccessor } from "@angular/forms";
-import { InputState } from "../../../interfaces/input-state.interface";
+import { InputState } from "../../../core/interfaces/input-state.interface";
 
 @Component({
   selector: 'app-input',

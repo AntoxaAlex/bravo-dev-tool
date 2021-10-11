@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MenuState } from "../../../interfaces/menu-state.interface";
+import { MenuState } from "../../../core/interfaces/menu-state.interface";
 
 @Component({
   selector: 'app-menu',

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ToasterState } from "../../../interfaces/toaster-state.interface";
+import { ToasterState } from "../../../core/interfaces/toaster-state.interface";
 
 @Component({
   selector: 'app-toaster',
