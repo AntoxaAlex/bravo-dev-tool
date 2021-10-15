@@ -1,11 +1,13 @@
 <button
   *ngIf="btnState.type === 'raised'"
   mat-raised-button
-  matTooltip="Info about the action"
-  matTooltipClass="tooltip"
   class="mat-btn-{{ btnState.color }}"
+  [style]="{width: btnState.width ? btnState.width : '',height: btnState.height ? btnState.height : ''}"
+  [disabled]=btnState.disabled
 >
-  <mat-icon *ngIf="btnState.icon">{{ btnState.icon }}</mat-icon>
+  <mat-icon *ngIf="btnState.icon">
+    {{ btnState.icon }}
+  </mat-icon>
   <span>{{ btnState.content }}</span>
 </button>
 

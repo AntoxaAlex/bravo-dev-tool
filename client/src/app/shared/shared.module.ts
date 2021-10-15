@@ -33,6 +33,7 @@ import { TableComponent } from './components/table/table.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { EmptyStateComponent } from './components/empty-state/empty-state.component';
+import { StateFieldPipe } from "../core/pipes/state-field.pipe";
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { EmptyStateComponent } from './components/empty-state/empty-state.compon
     NavItemComponent,
     CalendarComponent,
     EmptyStateComponent,
+    StateFieldPipe
   ],
   imports: [
     CommonModule,
@@ -73,6 +75,7 @@ import { EmptyStateComponent } from './components/empty-state/empty-state.compon
     ButtonComponent,
     ChipsComponent,
     InputComponent,
+    StateFieldPipe,
     SelectComponent,
     TooltipComponent,
     ToasterComponent,

@@ -1,17 +1,40 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ControlValueAccessor } from "@angular/forms";
-import { InputState } from "../../../core/interfaces/input-state.interface";
+import {
+  AfterViewChecked,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild
+} from '@angular/core';
+import { ControlValueAccessor, FormControl } from "@angular/forms";
+
+import { LoginPage } from "../../../core/interfaces/pages.interface";
+import { MyErrorStateMatcher } from "../../../auth/components/login/login.component";
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./input.component.scss']
 })
-export class InputComponent implements ControlValueAccessor{
-
-  @Input() public inputState: InputState
+export class InputComponent implements ControlValueAccessor,AfterViewChecked{
+  @Input() public page: LoginPage
+  @Input() public formControl: FormControl
+  @Input() public matcher: MyErrorStateMatcher
+  @Output() public inputIsValid = new EventEmitter<boolean>()
+  @ViewChild('inputElement') public inputElement: ElementRef
 
   constructor() { }
+
+  ngAfterViewChecked() {
+    if(!this.formControl.hasError('email') && !this.formControl.hasError('required')){
+      this.inputIsValid.emit(true)
+    }else{
+      this.inputIsValid.emit(false)
+    }
+  }
 
   public onChange: any = () => {};
   public onTouch: any = () => {};

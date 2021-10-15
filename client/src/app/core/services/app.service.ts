@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from "@angular/cdk/layout";
+import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Location } from "@angular/common";
-import { Observable, Subject } from "rxjs";
+import { Subject } from "rxjs";
 import { takeUntil } from "rxjs/operators";
 import { Store } from "@ngrx/store";
-import { BravoState } from "../store/reducers";
-import { ChangePageSize } from "../store/actions/page.actions";
-import { selectPageState } from "../store/selectors/index.selectors";
-import { PageState } from "../store/reducers/page.reducer";
 
+import { BravoState } from "../store/reducers";
+import { ChangePage, ChangePageSize } from "../store/actions/page.actions";
 
 
 @Injectable({
@@ -41,10 +39,29 @@ export class AppService {
     ]).pipe(takeUntil(destroy$)).subscribe(data => {
       for (const query of Object.keys(data.breakpoints)) {
         if (data.breakpoints[query]) {
-          const payload = this.displayNameMap.get(query)!
-          this.store$.dispatch(new ChangePageSize(payload))
+          const value = this.displayNameMap.get(query)!
+          this.store$.dispatch(new ChangePageSize(value))
         }
       }
     });
+  }
+
+  public changePageState(page: any, pageName: string, propName: string, index: number | null, name: string, value: any): void{
+    let newPage = {...page}
+    for(let prop in newPage){
+      if(prop === propName){
+        if(newPage[prop].length && index){
+          let newArray = [...newPage[prop]]
+          let newArrayItem = {...newArray[index],[name]:value}
+          console.log(newPage)
+        }else{
+          const newInputState = {...newPage[prop],[name]:value}
+          newPage = {...newPage,[propName]:newInputState}
+          this.store$.dispatch(new ChangePage({name:pageName,value:newPage}))
+        }
+      }else if(typeof page[propName] === 'object'){
+        this.changePageState(newPage[propName], pageName, propName, index, name, value)
+      }
+    }
   }
 }

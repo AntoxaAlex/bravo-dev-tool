@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { AppService } from "./core/services/app.service";
-import { Observable, Subject } from "rxjs";
-import { BravoState } from "./core/store/reducers";
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { select, Store } from "@ngrx/store";
+import { Observable, Subject } from "rxjs";
+
+import { AppService } from "./core/services/app.service";
+import { BravoState } from "./core/store/reducers";
 import { selectPageState } from "./core/store/selectors/index.selectors";
-import { PageState } from "./core/store/reducers/page.reducer";
 
 @Component({
   selector: 'app-root',
@@ -14,8 +14,6 @@ import { PageState } from "./core/store/reducers/page.reducer";
 })
 export class AppComponent implements OnInit,OnDestroy{
 
-  public pageSize: string;
-  public pageDisplay: string;
   public pageType: string
   public pageState$: Observable<any>
   private destroy$ = new Subject<void>();
@@ -25,9 +23,7 @@ export class AppComponent implements OnInit,OnDestroy{
   ngOnInit() {
     this.pageType = this.appService.getPageType();
     this.appService.configurePageSize(this.destroy$)
-
     this.pageState$ = this.store$.pipe(select(selectPageState));
-
   }
 
   ngOnDestroy() {

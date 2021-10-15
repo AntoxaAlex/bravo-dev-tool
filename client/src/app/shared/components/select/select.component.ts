@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { OptionState, SelectState } from "../../../core/interfaces/select-state.interface";
 
 @Component({

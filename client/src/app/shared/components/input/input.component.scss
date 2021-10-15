@@ -4,11 +4,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 240px;
+  width: 100%;
 }
 
 .input-small{
   width: 100%;
+}
+
+.mat-icon{
+  font-size: 2rem;
+  width: 30px;
+  height: 50px;
 }
 
 .small-left{
@@ -19,13 +25,16 @@
   text-align: right;
 }
 
+label{
+  text-align: left;
+}
 
 :host ::ng-deep input{
   margin-left: 10px;
+  height: 40px;
 }
 
 :host ::ng-deep .input-default .mat-form-field-infix, :host ::ng-deep .input-default label{
-  border-color: $bravo-default;
   color: $bravo-default;
 }
 
@@ -33,7 +42,7 @@
   border-color: $bravo-primary;
 }
 
-:host ::ng-deep .input-active label{
+:host ::ng-deep .input-active label, :host ::ng-deep .input-active .mat-icon{
   color: $bravo-primary;
 }
 
@@ -41,7 +50,7 @@
   border-color: $bravo-success;
 }
 
-:host ::ng-deep .input-success label{
+:host ::ng-deep .input-success label, :host ::ng-deep .input-success .mat-icon{
   color: $bravo-success;
 }
 
@@ -49,7 +58,7 @@
   border-color: $bravo-warn;
 }
 
-:host ::ng-deep .input-error label{
+:host ::ng-deep .input-error label, :host ::ng-deep .input-error .mat-icon{
   color: $bravo-warn;
 }
 
@@ -63,11 +72,12 @@
 
 :host ::ng-deep .mat-form-field-infix{
   display: flex;
-  height: 48px;
+  height: 50px;
   border: 1.5px solid;
   border-radius: 10px;
   font-size: 1.4rem;
-  padding: 15px;
+  padding: 5px;
+  margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
   transition: border .2s;
@@ -80,5 +90,9 @@
 
 :host ::ng-deep .mat-form-field-wrapper{
   padding: 0;
+}
+
+:host ::ng-deep mat-input {
+  background-color: transparent;
 }
 

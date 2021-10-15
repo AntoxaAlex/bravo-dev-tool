@@ -4,6 +4,7 @@ export interface InputState {
   state: 'default' | 'active' | 'success' | 'error'
   leftIcon?: string,
   rightIcon?: string
+  index?: string,
   message?: {
     text: string,
     position: string
