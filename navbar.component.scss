@@ -1,0 +1,16 @@
+.navbar{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-auth{
+  background-color: transparent;
+}
+
+.navbar-general{
+  background-color: white;
+}
+
+.navbar-general.navbar-Medium, .navbar-general.navbar-Large, .navbar-general.navbar-XLarge{
+  flex-direction: column;
+}

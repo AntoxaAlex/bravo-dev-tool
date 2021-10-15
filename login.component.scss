@@ -1,0 +1,29 @@
+@import "../../../../variables";
+
+.auth-div{
+  background-color: $bravo-basic;
+  box-sizing: border-box;
+  width: 30%;
+  height: 40%;
+  min-width: 400px;
+  min-height: 400px;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid $bravo-default;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.auth-XSmall{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}

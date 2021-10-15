@@ -1,0 +1,27 @@
+<div class="input-div" [class]="'input-'+page.inputState.state">
+  <label>
+    {{ page.inputState.label }}
+  </label>
+  <mat-form-field  class="mat-input-field" appearance="fill">
+    <mat-icon *ngIf="page.inputState.leftIcon && page.inputState.state === 'error'">{{ page.inputState.leftIcon }}</mat-icon>
+    <input
+      matInput
+      #inputElement
+      [formControl]="formControl"
+      [errorStateMatcher]="matcher"
+      [id]="page.inputState.index ? page.inputState.index : ''"
+      [type]="page.inputState.type"
+      [(ngModel)]="value"
+      autocomplete="off"
+    >
+    <mat-icon *ngIf="page.inputState.rightIcon && page.inputState.state === 'success'">{{ page.inputState.rightIcon }}</mat-icon>
+  </mat-form-field>
+  <mat-hint
+    *ngIf="page.inputState.message"
+    class="input-small"
+    [class]="'small-'+page.inputState.message.position"
+  >
+    {{ page.inputState.message.text }}
+  </mat-hint>
+</div>
+

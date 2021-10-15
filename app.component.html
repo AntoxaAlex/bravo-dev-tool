@@ -1,0 +1,4 @@
+<div class="main-container main-{{ pageState$ | async | stateField:'pageSize' }}-container">
+  <app-navbar [pageSize]="pageState$ | async| stateField:'pageSize'"></app-navbar>
+  <router-outlet></router-outlet>
+</div>
