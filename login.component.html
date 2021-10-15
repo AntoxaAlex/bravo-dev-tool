@@ -1,0 +1,12 @@
+<div class="auth-div auth-{{ pageState$ | async | stateField:'pageSize' }}">
+  <h1>Log In</h1>
+  <app-input
+    [formControl]="emailFormControl"
+    [matcher]="matcher"
+    (inputIsValid)="validateInput($event)"
+    [page]="pageState$ | async | stateField:'loginPage'"
+  ></app-input>
+  <app-button
+    [btnState]="pageState$ | async | stateField:'submitButtonState'"
+    style="width: 80%"></app-button>
+</div>

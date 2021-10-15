@@ -1,0 +1,70 @@
+@import "../../../../variables";
+
+.input-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 240px;
+}
+
+:host ::ng-deep .input-default .mat-form-field-infix, :host ::ng-deep .input-default label{
+  border-color: $bravo-default;
+  color: $bravo-default;
+}
+
+:host ::ng-deep .input-active .mat-form-field-infix{
+  border-color: $bravo-primary;
+}
+
+:host ::ng-deep .input-active label{
+  color: $bravo-primary;
+}
+
+:host ::ng-deep .input-success .mat-form-field-infix{
+  border-color: $bravo-success;
+}
+
+:host ::ng-deep .input-success label{
+  color: $bravo-success;
+}
+
+:host ::ng-deep .input-error .mat-form-field-infix{
+  border-color: $bravo-warn;
+}
+
+:host ::ng-deep .input-error label{
+  color: $bravo-warn;
+}
+
+:host ::ng-deep .mat-form-field-ripple {
+  background-color: transparent !important;
+}
+
+:host ::ng-deep .input-div .mat-form-field-underline{
+  width: 0;
+}
+
+:host ::ng-deep .mat-form-field-infix{
+  display: flex;
+  height: 48px;
+  border: 1.5px solid;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border .2s;
+}
+
+:host ::ng-deep .input-div .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: transparent;
+  padding: 0;
+}
+
+:host ::ng-deep .mat-form-field-wrapper{
+  padding: 0;
+}
+
+:host ::ng-deep .input-div .mat-select-arrow-wrapper{
+  vertical-align: bottom;
+}

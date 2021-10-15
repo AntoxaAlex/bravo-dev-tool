@@ -1,0 +1,11 @@
+@import "../../../../variables";
+
+.logo-div{
+  display: flex;
+  align-items: center;
+}
+
+.logo-text{
+  margin-left: 10px;
+  font-family: $logo-font-family;
+}

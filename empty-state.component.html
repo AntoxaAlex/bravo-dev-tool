@@ -1,0 +1,21 @@
+<div class="empty-state-div">
+  <div class="empty-state-icon">
+    <mat-icon>{{ emptyState.icon }}</mat-icon>
+  </div>
+  <h2>{{ emptyState.title }}</h2>
+  <p>{{ emptyState.message }}</p>
+  <div class="buttons-div">
+    <app-button [btnState]="{
+      type: 'basic',
+      color: 'black',
+      content: 'Replace Catalog',
+      icon: 'file_upload'
+    }"></app-button>
+    <app-button [btnState]="{
+      type: 'basic',
+      color: 'primary',
+      content: 'Add product',
+      icon: 'add'
+    }"></app-button>
+  </div>
+</div>
